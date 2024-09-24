@@ -14,7 +14,7 @@ const LoginPage = () => {
   const handleGoogleSignIn = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
-      navigate('/dashboard'); // Adjust the route accordingly
+      navigate('/dashboard');
     } catch (error) {
       setErrorMessage('Google sign-in failed. Please try again.');
     }
@@ -50,6 +50,7 @@ const LoginPage = () => {
     <div className="login-container">
       <div className="login-box">
         <div className="login-left">
+          <img src={logo} alt="Logo" className="logo" />
           <h2>Login to Your Account</h2>
           <p>Login using social networks</p>
           <div className="social-login">
@@ -73,16 +74,10 @@ const LoginPage = () => {
           />
           <button className="login-btn" onClick={handleEmailSignIn}>Sign In</button>
           <p onClick={() => navigate('/forgot-password')} className="forgot-password-link">Forgot Password?</p>
-        </div>
-        <div className="login-right">
-          <img src={logo} alt="Logo" className="logo" />
-          <h2>Welcome Aboard!</h2>
-          <p>Sign up and explore a wealth of Filipino recipes!</p>
-          <button onClick={goToCreateAccount} className="sign-up-btn">Sign Up</button>
+          <p onClick={goToCreateAccount} className="sign-up-link">Sign Up</p>
         </div>
       </div>
 
-      {/* Modal for displaying error messages */}
       {errorMessage && (
         <div className="error-modal">
           <div className="error-modal-content">

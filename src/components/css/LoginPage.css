@@ -1,10 +1,12 @@
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url('../images/BackgroundImage/background.jpg'); /* Adjust the path to your background image */
+  background-image: url('../images/BackgroundImage/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  
 }
 
 .login-container {
@@ -12,91 +14,75 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgba(244, 244, 244, 0.386); /* Light background with transparency */
+  padding: 10px; 
+  background-color: rgba(244, 244, 244, 0.386); 
 }
 
 .login-box {
   display: flex;
-  width: 900px;
-  height: 500px;
-  background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px; /* Rounded corners for the box */
-}
-
-.login-left,
-.login-right {
-  padding: 40px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
 }
 
 .login-left {
-  width: 60%;
-}
-
-.login-right {
-  width: 40%;
-  background-color: #e5f5f0;
-  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
+  margin-bottom: 15px;
+  font-size: 22px;
   font-weight: bold;
-  color: #333; /* Darker text color */
+  color: #333;
+  text-align: center;
 }
 
 .login-input {
-  width: 100%;
-  padding: 15px;
+  width: 90%; 
+  padding: 12px; 
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
-  transition: border 0.3s ease;
+  font-size: 14px; 
 }
 
-.login-input:focus {
-  border-color: #347928; /* Change border color when focused */
-  outline: none;
-}
-
-.login-btn,
-.sign-up-btn {
-  padding: 15px;
-  width: 100%;
+.login-btn {
+  padding: 12px;
+  width: 70%; 
   border: none;
   background-color: #347928;
   color: white;
-  font-size: 16px;
+  font-size: 14px; 
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .social-login {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .social-btn {
-  font-size: 16px;
+  font-size: 14px; 
   border: none;
-  padding: 10px;
+  padding: 8px;
   cursor: pointer;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 40px; 
+  height: 40px;
+  margin: 0 10px;
 }
 
 .fb-btn {
@@ -111,17 +97,18 @@ h2 {
 
 .or-separator {
   text-align: center;
-  margin: 20px 0;
-  position: relative;
+  margin: 15px 0;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
+  position: relative;
+  color: #888;
 }
 
 .or-separator::before,
 .or-separator::after {
   content: '';
   display: block;
-  width: 40%;
+  width: 35%;
   height: 1px;
   background-color: #ccc;
   position: absolute;
@@ -136,92 +123,39 @@ h2 {
   right: 0;
 }
 
-.forgot-password-link {
-  margin-top: 15px;
+.forgot-password-link,
+.sign-up-link {
+  margin-top: 10px;
   color: #4caf50;
   cursor: pointer;
+  text-align: center;
+  font-size: 12px; 
 }
 
-.forgot-password-link:hover {
+.forgot-password-link:hover,
+.sign-up-link:hover {
   text-decoration: underline;
 }
 
 .logo {
-  width: 140px;
-  margin-bottom: 20px;
+  width: 120px; 
+  margin-bottom: 15px;
 }
 
-/* Button and Icon Styling with Hover Effects */
-.login-btn,
-.sign-up-btn {
-  padding: 15px;
-  width: 100%;
-  border: none;
-  background-color: #347928;
-  color: white;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
 
-.login-btn:hover,
-.sign-up-btn:hover {
-  background-color: #2b5f21; /* Darker shade on hover */
-  transform: translateY(-3px); /* Slight lifting effect */
-}
-
-/* Social Button Styling with Hover Effects */
-.social-btn {
-  font-size: 16px;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.fb-btn {
-  background-color: #3b5998;
-  color: white;
-}
-
-.google-btn {
-  background-color: #db4437;
-  color: white;
-}
-
-/* Hover effects for social buttons */
-.fb-btn:hover {
-  background-color: #2d4373; /* Darker shade of Facebook blue */
-  transform: scale(1.1); /* Slight enlargement */
-}
-
-.google-btn:hover {
-  background-color: #c23321; /* Darker shade of Google red */
-  transform: scale(1.1); /* Slight enlargement */
-}
-
-/* Modal Background */
 .error-modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
 
-/* Modal Content */
 .error-modal-content {
   background-color: white;
   padding: 20px;
@@ -229,25 +163,4 @@ h2 {
   text-align: center;
   width: 300px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.error-modal-content p {
-  margin-bottom: 15px;
-  font-size: 16px;
-  color: red; /* Make error message stand out */
-}
-
-/* Close Button for Modal */
-.close-modal-btn {
-  padding: 10px 20px;
-  background-color: #347928;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.close-modal-btn:hover {
-  background-color: #2b5f21;
 }
